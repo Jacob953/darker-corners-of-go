@@ -1,4 +1,10 @@
-# Go 鲜为人知的角落｜第 3 章 变量｜《Darker Corners of Go》独译（已授权）
+---
+weight: 3
+title: "第 3 章 变量"
+draft: false
+---
+
+# 第 3 章 变量
 
 > 当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn。
 

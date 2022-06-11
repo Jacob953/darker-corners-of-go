@@ -1,4 +1,10 @@
-# Go 鲜为人知的角落｜第 2 章 包导入｜《Darker Corners of Go》独译（已授权）
+---
+weight: 2
+title: "第 2 章 包导入"
+draft: false
+---
+
+# 第 2 章 包导入
 
 > 当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn。
 

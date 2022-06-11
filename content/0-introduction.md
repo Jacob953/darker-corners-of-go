@@ -1,4 +1,10 @@
-# Go 鲜为人知的角落｜第 0 章 介绍｜《Darker Corners of Go》独译（已授权）
+---
+weight: 0
+title: "第 0 章 介绍"
+draft: false
+---
+
+# 第 0 章 介绍
 
 > 当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn。
 
@@ -44,7 +50,3 @@
 如果你发现书籍中有撰写错误的地方，或者我总结的例子中没有包括令你最意外的 Go 的用法，请联系我：rytbiel@gmail.com。
 
 非常感谢 [Vytautas Shaltenis](https://rtfb.lt/) 和 [Jon Forrest](https://jlforrest.wordpress.com/) ，在他们的帮助下，这本书变得更加完整。
-
-## 目录
-
-（持续更新中）
