@@ -1,7 +1,8 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = ''
-
-theme = 'carte'
+baseURL = 'https://jacob953.com/darker-corners-of-go/'
+languageCode = 'zh'
+title = 'Go 鲜为人知的角落'
 
 publishDir = 'docs'
+
+theme = "carte"
+
