@@ -12,7 +12,7 @@ params:
             display: true # Possibile values: true | false
         shortDesc:
             display: true # Possibile values: true | false
-            value: "《Darker Corner of Go》独译（已授权）: Jacob953 "
+            value: "《Darker Corner of Go》独译（已授权）: Jacob953 Yu"
         platforms:
             display: true # Possibile values: true | false
             displayMode: "as-icons-and-text" # Possible values: as-text | as-icons | as-icons-and-text
