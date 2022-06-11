@@ -1,0 +1,3 @@
+[submodule "themes/carte"]
+	path = themes/carte
+	url = git@github.com:Jacob953/hugo-carte.git
