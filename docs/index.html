@@ -24,78 +24,55 @@
 
 
 
+ 
+    <nav id="page-toc">
+        <h2>目录</h2>
+        
+            <a href='#%e7%ac%ac-1-%e7%ab%a0-%e4%bb%a3%e7%a0%81%e6%a0%bc%e5%bc%8f%e5%8c%96'>第 1 章 代码格式化</a>
+        
+            <a href='#%e7%ac%ac-2-%e7%ab%a0-%e5%8c%85%e5%af%bc%e5%85%a5'>第 2 章 包导入</a>
+        
+            <a href='#%e7%ac%ac-3-%e7%ab%a0-%e5%8f%98%e9%87%8f'>第 3 章 变量</a>
+        
+            <a href='#'></a>
+        
+            <a href='#'></a>
+        
+            <a href='#'></a>
+        
+            <a href='#'></a>
+        
+            <a href='#'></a>
+        
+            <a href='#'></a>
+        
+            <a href='#'></a>
+        
+            <a href='#'></a>
+        
+            <a href='#'></a>
+        
+            <a href='#'></a>
+        
+            <a href='#'></a>
+        
+            <a href='#'></a>
+        
+            <a href='#'></a>
+        
+            <a href='#'></a>
+        
+            <a href='#'></a>
+        
+            <a href='#%e7%ac%ac-0-%e7%ab%a0-%e4%bb%8b%e7%bb%8d'>第 0 章 介绍</a>
+        
+    </nav>
 
         <main id="page-content">
     
         
     
-        <h1 id="go-鲜为人知的角落第-0-章-介绍darker-corners-of-go独译已授权">Go 鲜为人知的角落｜第 0 章 介绍｜《Darker Corners of Go》独译（已授权）</h1>
-<blockquote>
-<p>当前译本仍不稳定，如翻译有问题请及时联系 
-        <a
-            
-            href="mailto:jacob953@csu.edu.cn"
-        >
-            jacob953@csu.edu.cn
-        </a>
-。</p>
-</blockquote>
-<h2 id="译者序">译者序</h2>
-<p>决定翻译《Darker Corners of Go》那日，与 Rytis 先生结束初步交流时，已经凌晨 5 点了，想来更多是一种冲动。自从开始学习 Go 以来，越来越感到 Go 语言核心理论的简单美。
-在学习 Go 之初，我也硬着头皮去仔细阅读过《Effective Go》。但对于一个初学者来说，很难领会“圣经”中所表达的核心理念。</p>
-<p>于是，我试着去阅读《Darker Corners of Go》，精确、易懂、简短，以类型的方式对陷阱进行分类。尽管它不是很典型的入门类型书籍，但它依然让我直观地感受到了 Go 语言的特性，还帮助我更快地锁定查阅的范围。
-所以，我打算干脆将它用更加地道的方式翻译出来，直接分享给大家。一方面，可以锻炼自己的英文水平，面向更加开阔的技术世界；另一方面，可以对 Go 有更加深入的了解，还可以为 Go 的中文资源做贡献。</p>
-<p>这篇文章的篇幅很短，所以翻译得比较轻松，以不至于萌生放弃的念头。翻译工作仍在继续，我会逐步发布新的章节，在此面向中文社区的 Gopher 征求意见，希望给读者带来更好的阅读体验。
-这本书是根据《Darker Corners of Go》的电子版翻译过来的，与网上的电子版有一定的差异，有些内容是电子版没有的，或许后续会更新上去。</p>
-<p>实际上，在多年前，Kyle Quest 发布过一篇 &ldquo;50 Shades of Go: Traps, Gotchas, and Common Mistakes for New Golang Devs&rdquo;，当然，这篇文章也有中文译本。
-那篇文章以难度高低的方式对陷阱进行分类，而《Go 鲜为人知的角落》以类型的方式对陷阱进行分类。对于一个经验不足的 Gopher 来说，我认为后者或许更易被接受和学习。</p>
-<p>由于本人也是 Gopher 新手，翻译过程中难免会有一些错误和问题，还希望各位高手批评指正。如果您觉得翻译或内容中有任何错误和问题，请您及时反馈给我，以便及时地进行修正：jacob953@csu.edu.cn</p>
-<p>最后，我要感谢 Rytis Bieliunas 先生，是他给予了我极大的信任，让我以独译的角色翻译这本书，并时刻关注译本的进度，同时也要感段桂华女士，在翻译筹备过程中，是她在背后给予了我很多支持。</p>
-<p>我希望本书能对那些想了解、学习和研究 Go 的人们有所帮助！</p>
-<h2 id="作者序">作者序</h2>
-<h3 id="这是什么">这是什么？</h3>
-<p>在我刚开始学习 Go 的时候，读过一些相关的介绍书籍和语言规范，并且在此之前，我已经熟悉过其他几种编程语言。
-尽管如此，在学习了这些书籍之后，我认为我对 Go 的了解真的不够多，很难进行实际的工作。
-我觉得我对 Go 的工作方式了解得还不够深入，可能需要掉进很多坑里，才能对使用 Go 有所把握。</p>
-<p><strong>事实证明，我的判断是对的。</strong></p>
-<p>虽然 <code>简单</code>、<code>诗意</code>、<code>简洁</code> 是 Go 语言的核心理论，但当你深入使用 Go 时，你会发现，它的许多创造性方法会使你掉进坑里。</p>
-<p>目前为止，在使用 Go 制作应用程序的这几年时间中，我踩过数不胜数的坑，于是，我打算将这些经验总结到一起，为 Go 的新手们编写一份指南。</p>
-<p>我的目标是将 Go 中的各种可能让新开发者意料之外的知识点都收集到一起，这也许还能对一些不寻常的功能有所启发。
-希望这样可以为读者节省大量的查询和调试时间，并尽可能避免一些代价昂贵的漏洞。</p>
-<p>在阅读这本书之前，我认为你应该至少已经知道 Go 的语法，才能确保这本书对你是有用的。如果你已经有一定 Go 的编程经验，或已经熟悉其他编程语言，并且希望学习 Go，那就最好不过了。</p>
-<p>如果你发现书籍中有撰写错误的地方，或者我总结的例子中没有包括令你最意外的 Go 的用法，请联系我：rytbiel@gmail.com。</p>
-<p>非常感谢 
-    <span class="link-wrapper">
-        <a
-            
-            href="https://rtfb.lt/"
-            target="_blank"
-        >
-            Vytautas Shaltenis
-        </a>
-        <img src="/assets/img/icons/external-link-icon.svg" height="12" width="12" />
-    </span>
- 和 
-    <span class="link-wrapper">
-        <a
-            
-            href="https://jlforrest.wordpress.com/"
-            target="_blank"
-        >
-            Jon Forrest
-        </a>
-        <img src="/assets/img/icons/external-link-icon.svg" height="12" width="12" />
-    </span>
- ，在他们的帮助下，这本书变得更加完整。</p>
-<h2 id="目录">目录</h2>
-<p>（持续更新中）</p>
-
-    
-
-    
-        
-    
-        <h1 id="go-鲜为人知的角落第-1-章-代码格式化darker-corners-of-go独译已授权">Go 鲜为人知的角落｜第 1 章 代码格式化｜《Darker Corners of Go》独译（已授权）</h1>
+        <h1 id="第-1-章-代码格式化">第 1 章 代码格式化</h1>
 <blockquote>
 <p>当前译本仍不稳定，如翻译有问题请及时联系 
         <a
@@ -166,6 +143,293 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 语法错误：不期望换行，期望是 , 或 }
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">Two</span>: <span style="color:#ae81ff">2</span>
 </span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+    
+
+    
+        
+    
+        <h1 id="第-2-章-包导入">第 2 章 包导入</h1>
+<blockquote>
+<p>当前译本仍不稳定，如翻译有问题请及时联系 
+        <a
+            
+            href="mailto:jacob953@csu.edu.cn"
+        >
+            jacob953@csu.edu.cn
+        </a>
+。</p>
+</blockquote>
+<h2 id="未使用的导入包">未使用的导入包</h2>
+<p>带有未使用导入包的 Go 程序是无法进行编译的。这是该语言的特点，因为导入包会降低编译器的速度。
+在大型程序中，导入未使用的包会对编译时间产生重大影响。</p>
+<p>为了在开发过程中使编译器正常运行，你可以以下方式导入未使用的包：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;math&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 参照导入未使用的包
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">math</span>.<span style="color:#a6e22e">Round</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="goimports">goimports</h2>
+<p>更好的解决方案是使用 goimports 工具，它可以删除未引用的导入包。更棒的是，它试图自动找到并添加缺失的包：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;math&#34;</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 导入而未使用：&#34;math&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello&#34;</span>) <span style="color:#75715e">// 未定义：fmt
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><p><strong>运行 goimports：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>./goimports main.go            
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>大多数流行的 IDE 的 Go 插件在保存源文件时，会自动运行 goimports。</p>
+<h2 id="下划线导入">下划线导入</h2>
+<p>以下划线的方式导入包只是为了包的副作用。以这种方式导入包，程序会创建包级变量并运行包的 
+    <span class="link-wrapper">
+        <a
+            
+            href="https://medium.com/golangspec/init-functions-in-go-eac191b3860a"
+            target="_blank"
+        >
+            init 函数
+        </a>
+        <img src="/assets/img/icons/external-link-icon.svg" height="12" width="12" />
+    </span>
+：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">package1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">package1Function</span>() <span style="color:#66d9ef">int</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Package 1 side-effect&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">globalVariable</span> = <span style="color:#a6e22e">package1Function</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">init</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Package 1 init side effect&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>在 package2 中：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">package2</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#a6e22e">_</span> <span style="color:#a6e22e">package1</span>
+</span></span></code></pre></div><p>这将打印出信息并初始化 globalVariable：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Package <span style="color:#ae81ff">1</span> side-effect
+</span></span><span style="display:flex;"><span>Package <span style="color:#ae81ff">1</span> init side effect
+</span></span></code></pre></div><p>多次导入一个包（e.g. 在 main 包及其引用的其他包中），只运行一次 init 函数。</p>
+<p>下划线导入在 Go 运行时库中使用。例如，导入 net/http/pprof 会调用它的 init 函数，以暴露可以提供调试信息的 HTTP 端点：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#a6e22e">_</span> <span style="color:#e6db74">&#34;net/http/pprof&#34;</span>
+</span></span></code></pre></div><h2 id="点导入">点导入</h2>
+<p>点导入允许在没有限定词的情况下，访问导入的包中的标识符：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>    . <span style="color:#e6db74">&#34;math&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">Sin</span>(<span style="color:#ae81ff">3</span>)) <span style="color:#75715e">// 引用 math.Sin
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><blockquote>
+<p>关于点导入是否应该从语言中删除，有一个公开的辩论。Go 团队不建议在除了在测试包之外的地方使用它们。
+这使得程序更难阅读，因为不清楚像 Quux 这样的名字是在当前包中还是在导入的包中的顶级标识符。</p>
+<p>
+    <span class="link-wrapper">
+        <a
+            
+            href="https://golang.org/doc/faq"
+            target="_blank"
+        >
+            https://golang.org/doc/faq
+        </a>
+        <img src="/assets/img/icons/external-link-icon.svg" height="12" width="12" />
+    </span>
+</p>
+</blockquote>
+<p>另外，如果你在使用go-lint工具，那么，在测试文件之外使用点导入时，它会显示一个警告，而且你无法轻易关闭它。</p>
+<p>Go 团队推荐的一种使用情况是在测试中，由于循环依赖，不能成为被测包的一部分。依赖关系。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#75715e">// foo_test 包测试 foo 包
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">package</span> <span style="color:#a6e22e">foo_test</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;bar/testutil&#34;</span> <span style="color:#75715e">// 也导入了 &#34;foo&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    . <span style="color:#e6db74">&#34;foo&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>这个测试文件不是 foo 包的一部分，因为它引用了 bar/testutil，而 bar/testutil 又引用了 foo。这将产生一个循环的依赖关系。</p>
+<p>在这种情况下，首先要考虑的是，也许有一个更好的方法来结构这些包，以避免循环依赖性。
+将 bar/testutil 使用的包从 foo 移到 foo 和 bar/testutil 都可以导入的第三个包中，可能有意义，也可能没有意义，这样就能在 foo 包中正常地编写测试。</p>
+<p>如果重构没有意义，并且测试以点导入的方式被引用到独立包中，foo_test 包至少可以假装是 foo 包的一部分。但要注意的是，它不能访问 foo 包中未导出的类型和函数。</p>
+<p>可以说，在特定领域的语言中，点导入有一个很好的用例。 例如，Goa 框架将其用于配置。如果没有点导入，它看起来就不是很好：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">design</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> . <span style="color:#e6db74">&#34;goa.design/goa/v3/dsl&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// API 描述了 API 服务器的全局属性。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">API</span>(<span style="color:#e6db74">&#34;calc&#34;</span>, <span style="color:#66d9ef">func</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Title</span>(<span style="color:#e6db74">&#34;Calculator Service&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Description</span>(<span style="color:#e6db74">&#34;HTTP service for adding numbers, a goa teaser&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Server</span>(<span style="color:#e6db74">&#34;calc&#34;</span>, <span style="color:#66d9ef">func</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Host</span>(<span style="color:#e6db74">&#34;localhost&#34;</span>, <span style="color:#66d9ef">func</span>() { <span style="color:#a6e22e">URI</span>(<span style="color:#e6db74">&#34;http://localhost:8088&#34;</span>) })
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div>
+    
+
+    
+        
+    
+        <h1 id="第-3-章-变量">第 3 章 变量</h1>
+<blockquote>
+<p>当前译本仍不稳定，如翻译有问题请及时联系 
+        <a
+            
+            href="mailto:jacob953@csu.edu.cn"
+        >
+            jacob953@csu.edu.cn
+        </a>
+。</p>
+</blockquote>
+<h2 id="未使用的变量">未使用的变量</h2>
+<p>含有未使用变量的 Go 程序无法编译：</p>
+<blockquote>
+<p>存在未使用的变量，表明可能存在一个错误[&hellip;]，Go 拒绝编译带有未使用的变量或包导入，以短期的便利保证长期的构建速度和程序的清晰度。</p>
+<p>
+    <span class="link-wrapper">
+        <a
+            
+            href="https://golang.org/doc/faq"
+            target="_blank"
+        >
+            https://golang.org/doc/faq
+        </a>
+        <img src="/assets/img/icons/external-link-icon.svg" height="12" width="12" />
+    </span>
+</p>
+</blockquote>
+<p>该规则的例外是全局变量和函数参数：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">unusedGlobal</span> <span style="color:#66d9ef">int</span> <span style="color:#75715e">// 合法的
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">f1</span>(<span style="color:#a6e22e">unusedArg</span> <span style="color:#66d9ef">int</span>) { <span style="color:#75715e">// 未使用的函数声明也是可以的
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// 错误: 定义但未使用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 这里使用了 b ，但 a 只是分配给了，不算是 &#34;使用&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">a</span> = <span style="color:#a6e22e">b</span> 
+</span></span><span style="display:flex;"><span>}   
+</span></span></code></pre></div><h2 id="短变量声明">短变量声明</h2>
+<p>短变量声明只在函数中起作用：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">v1</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1</span> <span style="color:#75715e">// 错误: 在函数体外不能有声明语句
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">v2</span> = <span style="color:#ae81ff">2</span> <span style="color:#75715e">// 合法的
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">v3</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">3</span> <span style="color:#75715e">// 合法的
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">v3</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>在设置结构体字段值时，它们也不起作用：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">myStruct</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Field</span> <span style="color:#66d9ef">int</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s</span> <span style="color:#a6e22e">myStruct</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 错误: 非名称的 s.Field在 := 的左侧。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">Field</span>, <span style="color:#a6e22e">newVar</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">newVar</span> <span style="color:#66d9ef">int</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">Field</span>, <span style="color:#a6e22e">newVar</span> = <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span> <span style="color:#75715e">// 这实际上是合法的
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><h2 id="变量遮盖">变量遮盖</h2>
+<p>令人遗憾的是，Go 中允许使用变量遮盖。这是你需要经常注意的事情，因为它可能导致难以发现的问题。
+发生这种情况往往是图方便，在至少有一个变量是新的情况下，Go 允许使用短变量声明：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">v1</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 在这里 v1 实际上没有被重新声明，只是被设置了一个新的值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">v1</span>, <span style="color:#a6e22e">v2</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">v1</span>, <span style="color:#a6e22e">v2</span>) <span style="color:#75715e">// 打印 2, 3
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><p>然而，如果该声明是在另一个代码块内，它将声明一个新的变量，有可能导致严重的错误：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">v1</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">v1</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">v1</span>, <span style="color:#a6e22e">v2</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">v1</span>, <span style="color:#a6e22e">v2</span>) <span style="color:#75715e">// 打印 2, 3
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">v1</span>) <span style="color:#75715e">// 打印 1 !
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><p>对于一个更现实的例子，我们假设你有一个返回错误的函数：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;errors&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">func1</span>() <span style="color:#66d9ef">error</span> {
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">errFunc1</span>() (<span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">error</span>) {
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">errors</span>.<span style="color:#a6e22e">New</span>(<span style="color:#e6db74">&#34;important error&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">returnsErr</span>() <span style="color:#66d9ef">error</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">func1</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">v1</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">errFunc1</span>()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">v1</span>, <span style="color:#a6e22e">err</span>) <span style="color:#75715e">// 打印: 1 important error
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span> <span style="color:#75715e">// 返回 nil!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">returnsErr</span>()) <span style="color:#75715e">// 打印 nil
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><p>解决这个问题的办法很多，其中之一是不要在嵌套的代码块中使用短变量声明：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">returnsErr</span>() <span style="color:#66d9ef">error</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">func1</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">v1</span> <span style="color:#66d9ef">int</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">v1</span>, <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">errFunc1</span>()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">v1</span>, <span style="color:#a6e22e">err</span>) <span style="color:#75715e">// 打印: 1 important error
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span> <span style="color:#75715e">// 返回 &#34;important error&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><p>或者，相对于上面的例子，更好的做法是提前退出：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">returnsErr</span>() <span style="color:#66d9ef">error</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">func1</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">v1</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">errFunc1</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">v1</span>, <span style="color:#a6e22e">err</span>) <span style="color:#75715e">// 打印: 1 important error
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>也有一些工具可以帮助避免这个问题。在 go vet 工具中曾有实验性的变量遮盖检测，但它被删除了。
+你可以输入如下命令来安装和运行该工具：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>go get -u golang.org/x/tools/go/analysis/passes/shadow/cmd/shadow
+</span></span><span style="display:flex;"><span>go vet -vettool<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>which shadow<span style="color:#66d9ef">)</span>
+</span></span></code></pre></div><p>打印：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>.<span style="color:#ae81ff">\m</span>ain.go:20:7: declaration of <span style="color:#e6db74">&#34;err&#34;</span> shadows declaration at line <span style="color:#ae81ff">17</span>
 </span></span></code></pre></div>
     
 
@@ -1128,293 +1392,6 @@ log.Fatal 干净地退出应用程序，log.Panic 调用运行时警告。下面
 <pre tabindex="0"><code>BenchmarkLocation-8 16810 76179 ns/op 58192 B/op 14 allocs/op
 BenchmarkLocation2-8 188887110 6.97 ns/op 0 B/op 0 allocs/op
 </code></pre>
-    
-
-    
-        
-    
-        <h1 id="go-鲜为人知的角落第-2-章-包导入darker-corners-of-go独译已授权">Go 鲜为人知的角落｜第 2 章 包导入｜《Darker Corners of Go》独译（已授权）</h1>
-<blockquote>
-<p>当前译本仍不稳定，如翻译有问题请及时联系 
-        <a
-            
-            href="mailto:jacob953@csu.edu.cn"
-        >
-            jacob953@csu.edu.cn
-        </a>
-。</p>
-</blockquote>
-<h2 id="未使用的导入包">未使用的导入包</h2>
-<p>带有未使用导入包的 Go 程序是无法进行编译的。这是该语言的特点，因为导入包会降低编译器的速度。
-在大型程序中，导入未使用的包会对编译时间产生重大影响。</p>
-<p>为了在开发过程中使编译器正常运行，你可以以下方式导入未使用的包：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;fmt&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;math&#34;</span>
-</span></span><span style="display:flex;"><span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// 参照导入未使用的包
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">math</span>.<span style="color:#a6e22e">Round</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello&#34;</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="goimports">goimports</h2>
-<p>更好的解决方案是使用 goimports 工具，它可以删除未引用的导入包。更棒的是，它试图自动找到并添加缺失的包：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;math&#34;</span> 
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// 导入而未使用：&#34;math&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello&#34;</span>) <span style="color:#75715e">// 未定义：fmt
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
-</span></span></code></pre></div><p><strong>运行 goimports：</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>./goimports main.go            
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello&#34;</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>大多数流行的 IDE 的 Go 插件在保存源文件时，会自动运行 goimports。</p>
-<h2 id="下划线导入">下划线导入</h2>
-<p>以下划线的方式导入包只是为了包的副作用。以这种方式导入包，程序会创建包级变量并运行包的 
-    <span class="link-wrapper">
-        <a
-            
-            href="https://medium.com/golangspec/init-functions-in-go-eac191b3860a"
-            target="_blank"
-        >
-            init 函数
-        </a>
-        <img src="/assets/img/icons/external-link-icon.svg" height="12" width="12" />
-    </span>
-：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">package1</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">package1Function</span>() <span style="color:#66d9ef">int</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Package 1 side-effect&#34;</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">globalVariable</span> = <span style="color:#a6e22e">package1Function</span>()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">init</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Package 1 init side effect&#34;</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p><strong>在 package2 中：</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">package2</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#a6e22e">_</span> <span style="color:#a6e22e">package1</span>
-</span></span></code></pre></div><p>这将打印出信息并初始化 globalVariable：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Package <span style="color:#ae81ff">1</span> side-effect
-</span></span><span style="display:flex;"><span>Package <span style="color:#ae81ff">1</span> init side effect
-</span></span></code></pre></div><p>多次导入一个包（e.g. 在 main 包及其引用的其他包中），只运行一次 init 函数。</p>
-<p>下划线导入在 Go 运行时库中使用。例如，导入 net/http/pprof 会调用它的 init 函数，以暴露可以提供调试信息的 HTTP 端点：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#a6e22e">_</span> <span style="color:#e6db74">&#34;net/http/pprof&#34;</span>
-</span></span></code></pre></div><h2 id="点导入">点导入</h2>
-<p>点导入允许在没有限定词的情况下，访问导入的包中的标识符：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;fmt&#34;</span>
-</span></span><span style="display:flex;"><span>    . <span style="color:#e6db74">&#34;math&#34;</span>
-</span></span><span style="display:flex;"><span>)
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">Sin</span>(<span style="color:#ae81ff">3</span>)) <span style="color:#75715e">// 引用 math.Sin
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
-</span></span></code></pre></div><blockquote>
-<p>关于点导入是否应该从语言中删除，有一个公开的辩论。Go 团队不建议在除了在测试包之外的地方使用它们。
-这使得程序更难阅读，因为不清楚像 Quux 这样的名字是在当前包中还是在导入的包中的顶级标识符。</p>
-<p>
-    <span class="link-wrapper">
-        <a
-            
-            href="https://golang.org/doc/faq"
-            target="_blank"
-        >
-            https://golang.org/doc/faq
-        </a>
-        <img src="/assets/img/icons/external-link-icon.svg" height="12" width="12" />
-    </span>
-</p>
-</blockquote>
-<p>另外，如果你在使用go-lint工具，那么，在测试文件之外使用点导入时，它会显示一个警告，而且你无法轻易关闭它。</p>
-<p>Go 团队推荐的一种使用情况是在测试中，由于循环依赖，不能成为被测包的一部分。依赖关系。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#75715e">// foo_test 包测试 foo 包
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">package</span> <span style="color:#a6e22e">foo_test</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;bar/testutil&#34;</span> <span style="color:#75715e">// 也导入了 &#34;foo&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    . <span style="color:#e6db74">&#34;foo&#34;</span>
-</span></span><span style="display:flex;"><span>)
-</span></span></code></pre></div><p>这个测试文件不是 foo 包的一部分，因为它引用了 bar/testutil，而 bar/testutil 又引用了 foo。这将产生一个循环的依赖关系。</p>
-<p>在这种情况下，首先要考虑的是，也许有一个更好的方法来结构这些包，以避免循环依赖性。
-将 bar/testutil 使用的包从 foo 移到 foo 和 bar/testutil 都可以导入的第三个包中，可能有意义，也可能没有意义，这样就能在 foo 包中正常地编写测试。</p>
-<p>如果重构没有意义，并且测试以点导入的方式被引用到独立包中，foo_test 包至少可以假装是 foo 包的一部分。但要注意的是，它不能访问 foo 包中未导出的类型和函数。</p>
-<p>可以说，在特定领域的语言中，点导入有一个很好的用例。 例如，Goa 框架将其用于配置。如果没有点导入，它看起来就不是很好：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">design</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> . <span style="color:#e6db74">&#34;goa.design/goa/v3/dsl&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// API 描述了 API 服务器的全局属性。
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">_</span> = <span style="color:#a6e22e">API</span>(<span style="color:#e6db74">&#34;calc&#34;</span>, <span style="color:#66d9ef">func</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Title</span>(<span style="color:#e6db74">&#34;Calculator Service&#34;</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Description</span>(<span style="color:#e6db74">&#34;HTTP service for adding numbers, a goa teaser&#34;</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Server</span>(<span style="color:#e6db74">&#34;calc&#34;</span>, <span style="color:#66d9ef">func</span>() {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Host</span>(<span style="color:#e6db74">&#34;localhost&#34;</span>, <span style="color:#66d9ef">func</span>() { <span style="color:#a6e22e">URI</span>(<span style="color:#e6db74">&#34;http://localhost:8088&#34;</span>) })
-</span></span><span style="display:flex;"><span>    })
-</span></span><span style="display:flex;"><span>})
-</span></span></code></pre></div>
-    
-
-    
-        
-    
-        <h1 id="go-鲜为人知的角落第-3-章-变量darker-corners-of-go独译已授权">Go 鲜为人知的角落｜第 3 章 变量｜《Darker Corners of Go》独译（已授权）</h1>
-<blockquote>
-<p>当前译本仍不稳定，如翻译有问题请及时联系 
-        <a
-            
-            href="mailto:jacob953@csu.edu.cn"
-        >
-            jacob953@csu.edu.cn
-        </a>
-。</p>
-</blockquote>
-<h2 id="未使用的变量">未使用的变量</h2>
-<p>含有未使用变量的 Go 程序无法编译：</p>
-<blockquote>
-<p>存在未使用的变量，表明可能存在一个错误[&hellip;]，Go 拒绝编译带有未使用的变量或包导入，以短期的便利保证长期的构建速度和程序的清晰度。</p>
-<p>
-    <span class="link-wrapper">
-        <a
-            
-            href="https://golang.org/doc/faq"
-            target="_blank"
-        >
-            https://golang.org/doc/faq
-        </a>
-        <img src="/assets/img/icons/external-link-icon.svg" height="12" width="12" />
-    </span>
-</p>
-</blockquote>
-<p>该规则的例外是全局变量和函数参数：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">unusedGlobal</span> <span style="color:#66d9ef">int</span> <span style="color:#75715e">// 合法的
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">f1</span>(<span style="color:#a6e22e">unusedArg</span> <span style="color:#66d9ef">int</span>) { <span style="color:#75715e">// 未使用的函数声明也是可以的
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// 错误: 定义但未使用
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 这里使用了 b ，但 a 只是分配给了，不算是 &#34;使用&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">a</span> = <span style="color:#a6e22e">b</span> 
-</span></span><span style="display:flex;"><span>}   
-</span></span></code></pre></div><h2 id="短变量声明">短变量声明</h2>
-<p>短变量声明只在函数中起作用：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">v1</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1</span> <span style="color:#75715e">// 错误: 在函数体外不能有声明语句
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">v2</span> = <span style="color:#ae81ff">2</span> <span style="color:#75715e">// 合法的
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">v3</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">3</span> <span style="color:#75715e">// 合法的
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">v3</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>在设置结构体字段值时，它们也不起作用：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">myStruct</span> <span style="color:#66d9ef">struct</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Field</span> <span style="color:#66d9ef">int</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s</span> <span style="color:#a6e22e">myStruct</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 错误: 非名称的 s.Field在 := 的左侧。
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">Field</span>, <span style="color:#a6e22e">newVar</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">newVar</span> <span style="color:#66d9ef">int</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">Field</span>, <span style="color:#a6e22e">newVar</span> = <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span> <span style="color:#75715e">// 这实际上是合法的
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
-</span></span></code></pre></div><h2 id="变量遮盖">变量遮盖</h2>
-<p>令人遗憾的是，Go 中允许使用变量遮盖。这是你需要经常注意的事情，因为它可能导致难以发现的问题。
-发生这种情况往往是图方便，在至少有一个变量是新的情况下，Go 允许使用短变量声明：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">v1</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 在这里 v1 实际上没有被重新声明，只是被设置了一个新的值
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">v1</span>, <span style="color:#a6e22e">v2</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">v1</span>, <span style="color:#a6e22e">v2</span>) <span style="color:#75715e">// 打印 2, 3
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
-</span></span></code></pre></div><p>然而，如果该声明是在另一个代码块内，它将声明一个新的变量，有可能导致严重的错误：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">v1</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">v1</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">v1</span>, <span style="color:#a6e22e">v2</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">v1</span>, <span style="color:#a6e22e">v2</span>) <span style="color:#75715e">// 打印 2, 3
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">v1</span>) <span style="color:#75715e">// 打印 1 !
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
-</span></span></code></pre></div><p>对于一个更现实的例子，我们假设你有一个返回错误的函数：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;errors&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;fmt&#34;</span>
-</span></span><span style="display:flex;"><span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">func1</span>() <span style="color:#66d9ef">error</span> {
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">errFunc1</span>() (<span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">error</span>) {
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">errors</span>.<span style="color:#a6e22e">New</span>(<span style="color:#e6db74">&#34;important error&#34;</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">returnsErr</span>() <span style="color:#66d9ef">error</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">func1</span>()
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">v1</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">errFunc1</span>()
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">v1</span>, <span style="color:#a6e22e">err</span>) <span style="color:#75715e">// 打印: 1 important error
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span> <span style="color:#75715e">// 返回 nil!
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">returnsErr</span>()) <span style="color:#75715e">// 打印 nil
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
-</span></span></code></pre></div><p>解决这个问题的办法很多，其中之一是不要在嵌套的代码块中使用短变量声明：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">returnsErr</span>() <span style="color:#66d9ef">error</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">func1</span>()
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">v1</span> <span style="color:#66d9ef">int</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">v1</span>, <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">errFunc1</span>()
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">v1</span>, <span style="color:#a6e22e">err</span>) <span style="color:#75715e">// 打印: 1 important error
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span> <span style="color:#75715e">// 返回 &#34;important error&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
-</span></span></code></pre></div><p>或者，相对于上面的例子，更好的做法是提前退出：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Golang" data-lang="Golang"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">returnsErr</span>() <span style="color:#66d9ef">error</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">func1</span>()
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">v1</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">errFunc1</span>()
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">v1</span>, <span style="color:#a6e22e">err</span>) <span style="color:#75715e">// 打印: 1 important error
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>也有一些工具可以帮助避免这个问题。在 go vet 工具中曾有实验性的变量遮盖检测，但它被删除了。
-你可以输入如下命令来安装和运行该工具：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>go get -u golang.org/x/tools/go/analysis/passes/shadow/cmd/shadow
-</span></span><span style="display:flex;"><span>go vet -vettool<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>which shadow<span style="color:#66d9ef">)</span>
-</span></span></code></pre></div><p>打印：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>.<span style="color:#ae81ff">\m</span>ain.go:20:7: declaration of <span style="color:#e6db74">&#34;err&#34;</span> shadows declaration at line <span style="color:#ae81ff">17</span>
-</span></span></code></pre></div>
     
 
     
@@ -2666,6 +2643,70 @@ switch
 not the end
 ...
 </code></pre>
+    
+
+    
+        
+    
+        <h1 id="第-0-章-介绍">第 0 章 介绍</h1>
+<blockquote>
+<p>当前译本仍不稳定，如翻译有问题请及时联系 
+        <a
+            
+            href="mailto:jacob953@csu.edu.cn"
+        >
+            jacob953@csu.edu.cn
+        </a>
+。</p>
+</blockquote>
+<h2 id="译者序">译者序</h2>
+<p>决定翻译《Darker Corners of Go》那日，与 Rytis 先生结束初步交流时，已经凌晨 5 点了，想来更多是一种冲动。自从开始学习 Go 以来，越来越感到 Go 语言核心理论的简单美。
+在学习 Go 之初，我也硬着头皮去仔细阅读过《Effective Go》。但对于一个初学者来说，很难领会“圣经”中所表达的核心理念。</p>
+<p>于是，我试着去阅读《Darker Corners of Go》，精确、易懂、简短，以类型的方式对陷阱进行分类。尽管它不是很典型的入门类型书籍，但它依然让我直观地感受到了 Go 语言的特性，还帮助我更快地锁定查阅的范围。
+所以，我打算干脆将它用更加地道的方式翻译出来，直接分享给大家。一方面，可以锻炼自己的英文水平，面向更加开阔的技术世界；另一方面，可以对 Go 有更加深入的了解，还可以为 Go 的中文资源做贡献。</p>
+<p>这篇文章的篇幅很短，所以翻译得比较轻松，以不至于萌生放弃的念头。翻译工作仍在继续，我会逐步发布新的章节，在此面向中文社区的 Gopher 征求意见，希望给读者带来更好的阅读体验。
+这本书是根据《Darker Corners of Go》的电子版翻译过来的，与网上的电子版有一定的差异，有些内容是电子版没有的，或许后续会更新上去。</p>
+<p>实际上，在多年前，Kyle Quest 发布过一篇 &ldquo;50 Shades of Go: Traps, Gotchas, and Common Mistakes for New Golang Devs&rdquo;，当然，这篇文章也有中文译本。
+那篇文章以难度高低的方式对陷阱进行分类，而《Go 鲜为人知的角落》以类型的方式对陷阱进行分类。对于一个经验不足的 Gopher 来说，我认为后者或许更易被接受和学习。</p>
+<p>由于本人也是 Gopher 新手，翻译过程中难免会有一些错误和问题，还希望各位高手批评指正。如果您觉得翻译或内容中有任何错误和问题，请您及时反馈给我，以便及时地进行修正：jacob953@csu.edu.cn</p>
+<p>最后，我要感谢 Rytis Bieliunas 先生，是他给予了我极大的信任，让我以独译的角色翻译这本书，并时刻关注译本的进度，同时也要感段桂华女士，在翻译筹备过程中，是她在背后给予了我很多支持。</p>
+<p>我希望本书能对那些想了解、学习和研究 Go 的人们有所帮助！</p>
+<h2 id="作者序">作者序</h2>
+<h3 id="这是什么">这是什么？</h3>
+<p>在我刚开始学习 Go 的时候，读过一些相关的介绍书籍和语言规范，并且在此之前，我已经熟悉过其他几种编程语言。
+尽管如此，在学习了这些书籍之后，我认为我对 Go 的了解真的不够多，很难进行实际的工作。
+我觉得我对 Go 的工作方式了解得还不够深入，可能需要掉进很多坑里，才能对使用 Go 有所把握。</p>
+<p><strong>事实证明，我的判断是对的。</strong></p>
+<p>虽然 <code>简单</code>、<code>诗意</code>、<code>简洁</code> 是 Go 语言的核心理论，但当你深入使用 Go 时，你会发现，它的许多创造性方法会使你掉进坑里。</p>
+<p>目前为止，在使用 Go 制作应用程序的这几年时间中，我踩过数不胜数的坑，于是，我打算将这些经验总结到一起，为 Go 的新手们编写一份指南。</p>
+<p>我的目标是将 Go 中的各种可能让新开发者意料之外的知识点都收集到一起，这也许还能对一些不寻常的功能有所启发。
+希望这样可以为读者节省大量的查询和调试时间，并尽可能避免一些代价昂贵的漏洞。</p>
+<p>在阅读这本书之前，我认为你应该至少已经知道 Go 的语法，才能确保这本书对你是有用的。如果你已经有一定 Go 的编程经验，或已经熟悉其他编程语言，并且希望学习 Go，那就最好不过了。</p>
+<p>如果你发现书籍中有撰写错误的地方，或者我总结的例子中没有包括令你最意外的 Go 的用法，请联系我：rytbiel@gmail.com。</p>
+<p>非常感谢 
+    <span class="link-wrapper">
+        <a
+            
+            href="https://rtfb.lt/"
+            target="_blank"
+        >
+            Vytautas Shaltenis
+        </a>
+        <img src="/assets/img/icons/external-link-icon.svg" height="12" width="12" />
+    </span>
+ 和 
+    <span class="link-wrapper">
+        <a
+            
+            href="https://jlforrest.wordpress.com/"
+            target="_blank"
+        >
+            Jon Forrest
+        </a>
+        <img src="/assets/img/icons/external-link-icon.svg" height="12" width="12" />
+    </span>
+ ，在他们的帮助下，这本书变得更加完整。</p>
+
     
 
     
