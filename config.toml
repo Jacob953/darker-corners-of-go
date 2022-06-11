@@ -3,3 +3,5 @@ languageCode = 'en-us'
 title = ''
 
 theme = 'carte'
+
+publishDir = 'docs'
