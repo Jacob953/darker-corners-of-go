@@ -2,7 +2,7 @@
    Resets
    =========================================*/
 
-   body {
+body {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -431,6 +431,16 @@ table td {
     box-sizing: border-box;
     padding: 24px;
     margin-bottom: 72px;
+}
+
+#page-toc a {
+    text-decoration: none;
+    color: #000;
+}
+
+#page-toc a:hover {
+    text-decoration: none;
+    color: skyblue;
 }
 
 #page-toc h2 {
