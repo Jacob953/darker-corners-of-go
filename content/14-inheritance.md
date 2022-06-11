@@ -1,4 +1,10 @@
-# Go 鲜为人知的角落｜第 14 章 继承｜《Darker Corners of Go》独译（已授权）
+---
+weight: 14
+title: "第 14 章 继承"
+draft: false
+---
+
+# 第 14 章 继承
 
 > 当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn。
 

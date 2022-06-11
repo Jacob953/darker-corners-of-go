@@ -1,4 +1,10 @@
-# Go 鲜为人知的角落｜第 12 章 协程｜《Darker Corners of Go》独译（已授权）
+---
+weight: 12
+title: "第 12 章 协程"
+draft: false
+---
+
+# 第 12 章 协程
 
 > 当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn。
 

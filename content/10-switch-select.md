@@ -1,4 +1,10 @@
-# Go 鲜为人知的角落｜第 10 章 switch & select 语句｜《Darker Corners of Go》独译（已授权）
+---
+weight: 10
+title: "第 10 章 switch & select 语句"
+draft: false
+---
+
+# 第 10 章 switch & select 语句
 
 > 当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn。
 

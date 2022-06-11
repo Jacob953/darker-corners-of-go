@@ -1,4 +1,10 @@
-# Go 鲜为人知的角落｜第 16 章 内存管理｜《Darker Corners of Go》独译（已授权）
+---
+weight: 16
+title: "第 16 章 内存管理"
+draft: false
+---
+
+# 第 16 章 内存管理
 
 > 当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn。
 

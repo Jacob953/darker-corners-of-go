@@ -1,4 +1,10 @@
-# Go 鲜为人知的角落｜第 13 章 接口｜《Darker Corners of Go》独译（已授权）
+---
+weight: 13
+title: "第 13 章 接口"
+draft: false
+---
+
+# 第 13 章 接口
 
 > 当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn。
 

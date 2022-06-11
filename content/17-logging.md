@@ -1,4 +1,10 @@
-# Go 鲜为人知的角落｜第 17 章 日志｜《Darker Corners of Go》独译（已授权）
+---
+weight: 17
+title: "第 17 章 日志"
+draft: false
+---
+
+# 第 17 章 日志
 
 > 当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn。
 

@@ -1,0 +1,19 @@
+baseURL: "/"
+languageCode: "zh"
+title: "Go 鲜为人知的角落"
+
+publishDir: "docs"
+
+theme: "carte"
+
+params:
+    uweuwe:
+        toc:
+            display: true # Possibile values: true | false
+        shortDesc:
+            display: true # Possibile values: true | false
+            value: "《Darker Corner of Go》独译（已授权）: Jacob953 "
+        platforms:
+            display: true # Possibile values: true | false
+            displayMode: "as-icons-and-text" # Possible values: as-text | as-icons | as-icons-and-text
+
