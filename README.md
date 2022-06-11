@@ -54,6 +54,10 @@
     ```
 3. 在浏览器中阅读，通常情况下：http://localhost:1313/
 
+<p align="center">
+    <img src="static/images/screenshot.png" width="80%"/>
+</p>
+
 ## 关于
 
 如果总结的例子中没有包括令你最意外的 Go 的用法，请联系 Rytis Biel：rytbiel@gmail.com
