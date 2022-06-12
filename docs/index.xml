@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Go 鲜为人知的角落</title>
-    <link>/</link>
+    <link>https://jacob953.com/darker-corners-of-go/</link>
     <description>Recent content on Go 鲜为人知的角落</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh</language><atom:link href="https://jacob953.com/darker-corners-of-go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>第 0 章 介绍</title>
-      <link>/0-introduction/</link>
+      <link>https://jacob953.com/darker-corners-of-go/0-introduction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/0-introduction/</guid>
+      <guid>https://jacob953.com/darker-corners-of-go/0-introduction/</guid>
       <description>第 0 章 介绍  当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn  。
  译者序 决定翻译《Darker Corners of Go》那日，与 Rytis 先生结束初步交流时，已经凌晨 5 点了，想来更多是一种冲动。自从开始学习 Go 以来，越来越感到 Go 语言核心理论的简单美。 在学习 Go 之初，我也硬着头皮去仔细阅读过《Effective Go》。但对于一个初学者来说，很难领会“圣经”中所表达的核心理念。
 于是，我试着去阅读《Darker Corners of Go》，精确、易懂、简短，以类型的方式对陷阱进行分类。尽管它不是很典型的入门类型书籍，但它依然让我直观地感受到了 Go 语言的特性，还帮助我更快地锁定查阅的范围。 所以，我打算干脆将它用更加地道的方式翻译出来，直接分享给大家。一方面，可以锻炼自己的英文水平，面向更加开阔的技术世界；另一方面，可以对 Go 有更加深入的了解，还可以为 Go 的中文资源做贡献。
@@ -23,10 +23,10 @@
     
     <item>
       <title>第 1 章 代码格式化</title>
-      <link>/1-code-formatting/</link>
+      <link>https://jacob953.com/darker-corners-of-go/1-code-formatting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/1-code-formatting/</guid>
+      <guid>https://jacob953.com/darker-corners-of-go/1-code-formatting/</guid>
       <description>第 1 章 代码格式化  当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn  。
  gofmt Go 大部分代码的格式化都是由 gofmt 工具强制执行的。gofmt 可以对源文件进行自动修改，例如，对导入的声明进行排序和对代码应用缩进等。 这是自切片面包以来最好的东西，因为它让开发人员不必再去争论这些无关紧要的事情。例如，使用制表符进行缩进，使用空格进行对齐，对代码风格的争论便到此为止。
 你完全可以不使用 gofmt 工具，但如果你真的使用它，你就不能把它配置成一种特定的格式化风格。该工具完全没有提供任何代码格式化的选项，而这正是重点所在—— 提供一种统一的、“足够好”的格式化风格。这可能没有人喜欢的风格，但 Go 的开发者最终决定 统一胜于完美。
@@ -40,10 +40,10 @@ package main  // 缺少函数体 func main() // 语法错误：不期望分号�
     
     <item>
       <title>第 2 章 包导入</title>
-      <link>/2-imports/</link>
+      <link>https://jacob953.com/darker-corners-of-go/2-imports/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/2-imports/</guid>
+      <guid>https://jacob953.com/darker-corners-of-go/2-imports/</guid>
       <description>第 2 章 包导入  当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn  。
  未使用的导入包 带有未使用导入包的 Go 程序是无法进行编译的。这是该语言的特点，因为导入包会降低编译器的速度。 在大型程序中，导入未使用的包会对编译时间产生重大影响。
 为了在开发过程中使编译器正常运行，你可以以下方式导入未使用的包：
@@ -54,10 +54,10 @@ package main import &amp;#34;math&amp;#34;  // 导入而未使用：&amp;#34;mat
     
     <item>
       <title>第 3 章 变量</title>
-      <link>/3-variables/</link>
+      <link>https://jacob953.com/darker-corners-of-go/3-variables/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/3-variables/</guid>
+      <guid>https://jacob953.com/darker-corners-of-go/3-variables/</guid>
       <description>第 3 章 变量  当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn  。
  未使用的变量 含有未使用变量的 Go 程序无法编译：
  存在未使用的变量，表明可能存在一个错误[&amp;hellip;]，Go 拒绝编译带有未使用的变量或包导入，以短期的便利保证长期的构建速度和程序的清晰度。
@@ -68,10 +68,10 @@ package main v1 := 1 // 错误: 在函数体外不能有声明语句  var v2 = 2
     
     <item>
       <title>第 4 章 运算符</title>
-      <link>/4-operators/</link>
+      <link>https://jacob953.com/darker-corners-of-go/4-operators/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/4-operators/</guid>
+      <guid>https://jacob953.com/darker-corners-of-go/4-operators/</guid>
       <description>第 4 章 运算符  当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn  。
  运算符优先级 Go的运算符优先级与其他语言不同：
 优先级 运算符 5 *, /, %, &amp;lt;&amp;lt;, &amp;gt;&amp;gt;, &amp;amp;, &amp;amp;^ 4 +, -, |, ^ 3 ==, !=, &amp;lt;, &amp;lt;=, &amp;gt;, &amp;gt;= 2 &amp;amp;&amp;amp; 1 || 与 C 语言进行比较：
@@ -80,10 +80,10 @@ package main v1 := 1 // 错误: 在函数体外不能有声明语句  var v2 = 2
     
     <item>
       <title>第 5 章 常量</title>
-      <link>/5-constants/</link>
+      <link>https://jacob953.com/darker-corners-of-go/5-constants/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/5-constants/</guid>
+      <guid>https://jacob953.com/darker-corners-of-go/5-constants/</guid>
       <description>第 5 章 常量  当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn  。
  iota 在 Go 中，iota 是起始常量编号。 它并不像人们想象的那样意味着 &amp;ldquo;从零开始&amp;rdquo;。它是当前 const 块中一个常数的索引：
 const (  myconst = &amp;#34;c&amp;#34;  myconst2 = &amp;#34;c2&amp;#34;  two = iota // 2 ) 使用两次 iota 并不能重置编号：
@@ -92,10 +92,10 @@ const (  zero = iota // 0  one // 1  two = iota // 2 ) </description>
     
     <item>
       <title>第 6 章 切片 &amp; 数组</title>
-      <link>/6-slices-arrays/</link>
+      <link>https://jacob953.com/darker-corners-of-go/6-slices-arrays/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/6-slices-arrays/</guid>
+      <guid>https://jacob953.com/darker-corners-of-go/6-slices-arrays/</guid>
       <description>第 6 章 切片 &amp;amp; 数组  当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn  。
  切片和数组 在 Go 中，切片和数组有类似的目的。它们的声明方式也几乎相同：
 package main  import &amp;#34;fmt&amp;#34;  func main() {  slice := []int{1, 2, 3}  array := [3]int{1, 2, 3}   // 让编译器来计算数组的长度  // 这将是一个等同于 [3]int  array2 := [...]int{1, 2, 3}  fmt.Println(slice, array, array2) } 输出：
@@ -104,10 +104,10 @@ package main  import &amp;#34;fmt&amp;#34;  func main() {  slice := []int{1, 2, 
     
     <item>
       <title>第 7 章 字符串 &amp; 字节数组</title>
-      <link>/7-strings-byte-arrays/</link>
+      <link>https://jacob953.com/darker-corners-of-go/7-strings-byte-arrays/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/7-strings-byte-arrays/</guid>
+      <guid>https://jacob953.com/darker-corners-of-go/7-strings-byte-arrays/</guid>
       <description>第 7 章 字符串 &amp;amp; 字节数组  当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn  。
  Go 的字符串 在 Go 中，字符串的定义是这样的：
 type StringHeader struct {  Data uintptr  Len int } 字符串本身是值类型，包含一个指向字节数组的指针和一个固定的长度。与 C 语言不同，Go 字符串中的零字节并不标志着字符串的结束。 字符串里面可以包含任何数据。通常情况下，这些数据被编码为 UTF-8 字符串，但它不一定是这样。
@@ -117,10 +117,10 @@ package main  import &amp;#34;fmt&amp;#34;  func main() {  var s string  fmt.Pri
     
     <item>
       <title>第 8 章 哈希</title>
-      <link>/8-maps/</link>
+      <link>https://jacob953.com/darker-corners-of-go/8-maps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/8-maps/</guid>
+      <guid>https://jacob953.com/darker-corners-of-go/8-maps/</guid>
       <description>第 8 章 哈希  当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn  。
  哈希的迭代顺序是随机的（实则不然） 技术上来说，哈希的迭代顺序是“未定义的”。在 Go 中，哈希的内部会使用一个哈希表，所以迭代通常是按照元素在该表中的顺序进行的。 但这个顺序是不可靠的，当新的元素被添加到哈希中时，这个顺序会随着哈希表的增长而改变。 在 Go 的早期时候，这对那些没有阅读说明，并且依赖按一定顺序迭代哈希的程序员来说，是一个巨坑。 为了帮助程序员尽早，而不是在生产中发现这些问题，Go 的开发者将哈希的迭代变得随机：
 package main  import &amp;#34;fmt&amp;#34;  func main() {  // 添加顺序元素  // 使哈希看起来像是按顺序迭代的  m := map[int]int{0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5}  for i := 0; i &amp;lt; 5; i++ {  for i := range m {  fmt.Print(i, &amp;#34; &amp;#34;)  }  fmt.</description>
@@ -128,10 +128,10 @@ package main  import &amp;#34;fmt&amp;#34;  func main() {  // 添加顺序元素
     
     <item>
       <title>第 9 章 循环</title>
-      <link>/9-loops/</link>
+      <link>https://jacob953.com/darker-corners-of-go/9-loops/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/9-loops/</guid>
+      <guid>https://jacob953.com/darker-corners-of-go/9-loops/</guid>
       <description>第 9 章 循环  当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn  。
  range 迭代器会返回两个值 由于 for-range 的工作方式与其他语言不尽相同，对于 Go 的初学者来说，这很可能是一个坑。 for-range 会返回一个或两个变量，第一个是迭代索引（如果是迭代哈希，则是哈希键），第二个是值。如果只使用一个变量——那它就是索引：
 package main  import &amp;#34;fmt&amp;#34;  func main() {  slice := []string{&amp;#34;one&amp;#34;, &amp;#34;two&amp;#34;, &amp;#34;three&amp;#34;}  for v := range slice {  fmt.Println(v) // 0, 1, 2  }  for _, v := range slice {  fmt.Println(v) // one two three  } } for 循环会重复使用迭代器变量 在循环中，每次迭代都会重复使用同一个迭代器变量。如果你读取它的地址，那每次都是同一个地址。 这意味着在每次迭代中，迭代器变量的值都会被复制到同一个内存位置。这使得循环更有效率，但也是 Go 最常见的陷阱之一。 下面是 Go wiki 中的一个例子：</description>
@@ -139,10 +139,10 @@ package main  import &amp;#34;fmt&amp;#34;  func main() {  slice := []string{&am
     
     <item>
       <title>第 10 章 switch &amp; select 语句</title>
-      <link>/10-switch-select/</link>
+      <link>https://jacob953.com/darker-corners-of-go/10-switch-select/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/10-switch-select/</guid>
+      <guid>https://jacob953.com/darker-corners-of-go/10-switch-select/</guid>
       <description>第 10 章 switch &amp;amp; select 语句  当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn  。
  case 语句默认为断句 与 C 语言的 case 语句不同，Go 中的 case 语句默认为中断。要使 case 语句通过，请使用 fallthrough 关键字：
 package main  import (  &amp;#34;fmt&amp;#34;  &amp;#34;time&amp;#34; )  func main() {  // 这样无法运行，如果是 Saturday 情况，那什么都不会被打印  switch time.Now().Weekday() {  case 6: // 这种情况下，不会做任何事情，并跳出 switch  case 7:  fmt.Println(&amp;#34;weekend&amp;#34;)  }   switch time.Now().Weekday() {  case 1:  break // 这个 break 没有任何作用，因为无论如何都会跳出  case 2:  fmt.</description>
@@ -150,10 +150,10 @@ package main  import (  &amp;#34;fmt&amp;#34;  &amp;#34;time&amp;#34; )  func ma
     
     <item>
       <title>第 11 章 函数</title>
-      <link>/11-functions/</link>
+      <link>https://jacob953.com/darker-corners-of-go/11-functions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/11-functions/</guid>
+      <guid>https://jacob953.com/darker-corners-of-go/11-functions/</guid>
       <description>第 11 章 函数  当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn  。
  defer 语句 defer 似乎没有大坑，但有一些细微差别是值得一提的。
 关于这个问题，有一篇来自 Andrew Gerrand 的 好文章   ：
@@ -165,10 +165,10 @@ original defer 一旦原函数返回，递延函数就按后进先出的顺序�
     
     <item>
       <title>第 12 章 协程</title>
-      <link>/12-goroutines/</link>
+      <link>https://jacob953.com/darker-corners-of-go/12-goroutines/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/12-goroutines/</guid>
+      <guid>https://jacob953.com/darker-corners-of-go/12-goroutines/</guid>
       <description>第 12 章 协程  当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn  。
  什么是 goroutine 通常情况下，goroutine 可以被认为是轻量级线程。goroutine 的启动非常快速，因为仅需要使用 2kb 内存就可以初始化堆栈（当然，也可以改动）。 goroutine 由 Go 的运行时系统管理（而不是操作系统），因此，在上下文切换的代价很低。 goroutine 就是为并发而生的，即使在多个硬件的线程上运行，它们也可以并行。
  并发是指同时处理很多事情；并行是指同时做很多事情。
@@ -181,10 +181,10 @@ package main  import (  &amp;#34;fmt&amp;#34;  &amp;#34;time&amp;#34; )  func go
     
     <item>
       <title>第 13 章 接口</title>
-      <link>/13-interfaces/</link>
+      <link>https://jacob953.com/darker-corners-of-go/13-interfaces/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/13-interfaces/</guid>
+      <guid>https://jacob953.com/darker-corners-of-go/13-interfaces/</guid>
       <description>第 13 章 接口  当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn  。
  检查接口变量是否为 nil 在 Go 中，接口当然是最常见的坑之一。但与其他语言不同，Go 的接口不只是一个指向内存位置的指针。
 一个接口类型的结构有：
@@ -194,10 +194,10 @@ package main  import (  &amp;#34;fmt&amp;#34;  &amp;#34;time&amp;#34; )  func go
     
     <item>
       <title>第 14 章 继承</title>
-      <link>/14-inheritance/</link>
+      <link>https://jacob953.com/darker-corners-of-go/14-inheritance/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/14-inheritance/</guid>
+      <guid>https://jacob953.com/darker-corners-of-go/14-inheritance/</guid>
       <description>第 14 章 继承  当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn  。
  重定义类型 vs 嵌入类型 Go 的类型系统可能更加实用。它不像 C++ 或 Java 那样是面向对象的。在 Go 中，你不能真正地继承结构体或接口（因为没有子类），但你可以把它们放在一起（嵌入），形成更复杂的结构体或接口。
  嵌入与子类有一个重要的不同之处：当我们嵌入一个类型时，该类型的方法会成为外类型的方法；但是当它们被调用时，方法的接收者是内类型，而不是外类型。
@@ -207,10 +207,10 @@ package main  type t1 struct {  f1 string }  func (t *t1) t1method() { }  // 嵌
     
     <item>
       <title>第 15 章 平等性</title>
-      <link>/15-equality/</link>
+      <link>https://jacob953.com/darker-corners-of-go/15-equality/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/15-equality/</guid>
+      <guid>https://jacob953.com/darker-corners-of-go/15-equality/</guid>
       <description>第 15 章 平等性  当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn  。
  Go 的平等性 在 Go 中，有很多不同的方法来比较平等性，但没有一个是完美的。
 == 和 != 操作符 在 Go 中，== 运算符是最简单、最有效的比较方法，但它只对某些类型有效。 最值得注意的是，它对切片或哈希不起作用。如果采用这种方式，切片和哈希只能与 nil 进行比较。
@@ -220,10 +220,10 @@ package main  import &amp;#34;fmt&amp;#34;  type compareStruct1 struct {  A int 
     
     <item>
       <title>第 16 章 内存管理</title>
-      <link>/16-memory-management/</link>
+      <link>https://jacob953.com/darker-corners-of-go/16-memory-management/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/16-memory-management/</guid>
+      <guid>https://jacob953.com/darker-corners-of-go/16-memory-management/</guid>
       <description>第 16 章 内存管理  当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn  。
  结构体应该按值传递还是按引用传递？ 在 Go 中，函数的参数总是按值传递。当一个结构体（或数组）类型的变量被传递到函数中时，整个结构体会被复制。 如果结构体的指针被传递，那么这个指针会被复制，但它所指向的结构体不会被复制。拷贝的是 8 个字节内存（对于 64 位架构），而不是该结构体的大小。 那么，这是否意味着将结构体作为指针传递会更好？经典回答——这要看情况。
 分配一个结构体（或数组）的指针：
@@ -234,10 +234,10 @@ package test  import (  &amp;#34;testing&amp;#34; )  type myStruct struct {  a, 
     
     <item>
       <title>第 17 章 日志</title>
-      <link>/17-logging/</link>
+      <link>https://jacob953.com/darker-corners-of-go/17-logging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/17-logging/</guid>
+      <guid>https://jacob953.com/darker-corners-of-go/17-logging/</guid>
       <description>第 17 章 日志  当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn  。
  log.Fatal 和 log.Panic 在 Go 中，使用日志包进行日志记录时，log.Fatal 和log.Panic 这两个函数有一个陷阱在等着你。 与你期望的日志函数不同，这些函数不仅仅是用不同的日志级别记录一条消息，它们还终止了整个应用程序。 log.Fatal 干净地退出应用程序，log.Panic 调用运行时警告。下面是 Go 日志包中的实际函数：
 // Fatal 相当于在 Print() 之后调用 os.Exit(1) func Fatal(v ...interface{}) {  std.Output(2, fmt.Sprint(v...))  os.Exit(1) }  // Panic 相当于在 Print() 之后调用 panic() func Panic(v ...interface{}) {  s := fmt.Sprint(v...)  std.Output(2, s)  panic(s) } </description>
@@ -245,10 +245,10 @@ package test  import (  &amp;#34;testing&amp;#34; )  type myStruct struct {  a, 
     
     <item>
       <title>第 18 章 时间</title>
-      <link>/18-time/</link>
+      <link>https://jacob953.com/darker-corners-of-go/18-time/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/18-time/</guid>
+      <guid>https://jacob953.com/darker-corners-of-go/18-time/</guid>
       <description>第 18 章 时间  当前译本仍不稳定，如翻译有问题请及时联系 jacob953@csu.edu.cn  。
  使用 time.LoadLocation 从文件中读取数据 在 Go 中，这是我个人而言最喜欢的一个坑。在时区之间转换，首先要需要加载位置信息。事实证明，每次调用 time.LoadLocation 都会从一个文件中读取数据。在格式化大量 CSV 报告的每一行时，这不是最好的做法：
 package main  import (  &amp;#34;testing&amp;#34;  &amp;#34;time&amp;#34; )  func BenchmarkLocation(b *testing.B) {  for n := 0; n &amp;lt; b.N; n++ {  loc, _ := time.LoadLocation(&amp;#34;Asia/Kolkata&amp;#34;)  time.Now().In(loc)  } }  func BenchmarkLocation2(b *testing.B) {  loc, _ := time.LoadLocation(&amp;#34;Asia/Kolkata&amp;#34;)  for n := 0; n &amp;lt; b.</description>
