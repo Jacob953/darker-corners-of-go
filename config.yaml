@@ -8,6 +8,7 @@ theme: "carte"
 
 params:
     uweuwe:
+        subsite: /darker-corners-of-go
         toc:
             display: true # Possibile values: true | false
         shortDesc:
